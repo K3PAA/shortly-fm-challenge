@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  </head>
+  <body>
+    <header class="container primary-header">
+      <img src="./images/logo.svg" alt="Shortly" />
+
+      <div class="active-elements" data-visible="false">
+        <nav class="primary-navigation" id="primary-navigation">
+          <ul role="list">
+            <li><a href="#">Deatures</a></li>
+            <li><a href="#"> Pricing</a></li>
+            <li><a href="#"> Resources</a></li>
+          </ul>
+        </nav>
+
+        <div class="buttons-container">
+          <button class="button">Login</button>
+          <button class="button button--blue">Sign Up</button>
+        </div>
+      </div>
+
+      <button
+        class="mobile-nav-toggle button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <img src="./images/menu.svg" alt="" aria-hidden="true" />
+      </button>
+    </header>
+
+    <main class="container">
+      <section class="even-columns">
+        <div>
+          <h1>More than just shorter links</h1>
+          <p>
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <button class="button button--blue">Get Started</button>
+        </div>
+        <!-- <div class="background"></div> -->
+        <img
+          src="./images/illustration-working.svg"
+          class="background--image"
+          alt=""
+        />
+      </section>
+      <section>
+        <form action="" class="bg-primary-700">
+          <input type="text" placeholder="Shorten a link here..." />
+          <button class="button button--blue">Shorten It!</button>
+        </form>
+
+        <ul></ul>
+      </section>
+    </main>
+
+    <section class="bg-neutral-200">
+      <div class="container">
+        <h1>Advanced Statistics</h1>
+
+        <p>
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+
+        <div class="cards-container">
+          <div class="card">
+            <h3>Brand Recognition</h3>
+            <p>
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Detailed Records</h3>
+            <p>
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Fully Customizable</h3>
+            <p>
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary-700">
+      <div class="container">
+        <h1>Boost your links today</h1>
+        <button class="button button--blue">Get Started</button>
+      </div>
+    </section>
+
+    <footer class="bg-neutral-700">
+      <div class="container">
+        <img src="" alt="" />
+
+        <div class="secondary-nav">
+          <ul>
+            <h3>Features</h3>
+            <li><a href="#">Link Shortening</a></li>
+            <li><a href="#"> Branded Links</a></li>
+            <li><a href="#"> Analytics</a></li>
+          </ul>
+          <ul>
+            <h3>Resources</h3>
+            <li><a href="#"> Blog</a></li>
+            <li><a href="#"> Developers</a></li>
+            <li><a href="#"> Support</a></li>
+          </ul>
+          <ul>
+            <h3>Company</h3>
+            <li><a href="#"> About</a></li>
+            <li><a href="#"> Our Team</a></li>
+            <li><a href="#"> Careers</a></li>
+            <li><a href="#"> Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="scoial-links">
+          <ul>
+            <li>
+              <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/icon-pinterest.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/icon-instagram.svg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
