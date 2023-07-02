@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <header class="container primary-header">
@@ -20,21 +21,21 @@
 
       <div class="active-elements" data-visible="false">
         <nav class="primary-navigation" id="primary-navigation">
-          <ul role="list">
-            <li><a href="#">Deatures</a></li>
+          <ul role="list" class="primary-navigation-list">
+            <li><a href="#">Features</a></li>
             <li><a href="#"> Pricing</a></li>
             <li><a href="#"> Resources</a></li>
           </ul>
         </nav>
 
         <div class="buttons-container">
-          <button class="button">Login</button>
-          <button class="button button--blue">Sign Up</button>
+          <button class="button button--rd-mid button--text-gray">Login</button>
+          <button class="button button--blue button--rd-mid">Sign Up</button>
         </div>
       </div>
 
       <button
-        class="mobile-nav-toggle button"
+        class="nav-toggle"
         aria-expanded="false"
         aria-controls="primary-navigation"
       >
@@ -44,25 +45,27 @@
 
     <main class="container">
       <section class="even-columns">
-        <div>
-          <h1>More than just shorter links</h1>
-          <p>
+        <div class="main--section">
+          <h1 class="main--title">More than just shorter links</h1>
+          <p class="clr-neutral-200">
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </p>
-          <button class="button button--blue">Get Started</button>
+          <button class="button button--blue button--rd-mid">
+            Get Started
+          </button>
         </div>
-        <!-- <div class="background"></div> -->
+
         <img
           src="./images/illustration-working.svg"
           class="background--image"
           alt=""
         />
       </section>
-      <section>
+      <section class="form-section">
         <form action="" class="bg-primary-700">
           <input type="text" placeholder="Shorten a link here..." />
-          <button class="button button--blue">Shorten It!</button>
+          <button class="button button--blue button--rd-sm">Shorten It!</button>
         </form>
 
         <ul></ul>
@@ -70,7 +73,7 @@
     </main>
 
     <section class="bg-neutral-200">
-      <div class="container">
+      <div class="container advanced-statistics">
         <h1>Advanced Statistics</h1>
 
         <p>
@@ -109,7 +112,7 @@
     <section class="bg-primary-700">
       <div class="container">
         <h1>Boost your links today</h1>
-        <button class="button button--blue">Get Started</button>
+        <button class="button button--blue button--rd-mid">Get Started</button>
       </div>
     </section>
 
