@@ -62,17 +62,31 @@
           alt=""
         />
       </section>
-      <section class="form-section">
-        <form action="" class="bg-primary-700">
-          <input type="text" placeholder="Shorten a link here..." />
-          <button class="button button--blue button--rd-sm">Shorten It!</button>
-        </form>
-
-        <ul></ul>
-      </section>
     </main>
 
-    <section class="bg-neutral-200">
+    <section class="form-section bg-graish">
+      <div class="container">
+        <form action="" class="bg-primary-700">
+          <input
+            type="text"
+            placeholder="Shorten a link here..."
+            class="shorten--input"
+          />
+          <button
+            type="button"
+            class="button button--blue button--rd-sm shorten--btn"
+          >
+            Shorten It!
+          </button>
+
+          <span class="addictional-info"></span>
+        </form>
+
+        <ul class="shorten-links"></ul>
+      </div>
+    </section>
+
+    <section class="bg-graish">
       <div class="container advanced-statistics">
         <h1>Advanced Statistics</h1>
 
@@ -89,6 +103,7 @@
               mean a thing. Branded links help instil confidence in your
               content.
             </p>
+            <img src="./images/icon-brand-recognition.svg" alt="icon" />
           </div>
           <div class="card">
             <h3>Detailed Records</h3>
@@ -97,6 +112,7 @@
               where people engage with your content helps inform better
               decisions.
             </p>
+            <img src="./images/icon-detailed-records.svg" alt="icon" />
           </div>
           <div class="card">
             <h3>Fully Customizable</h3>
@@ -104,14 +120,15 @@
               Improve brand awareness and content discoverability through
               customizable links, supercharging audience engagement.
             </p>
+            <img src="./images/icon-fully-customizable.svg" alt="icon" />
           </div>
         </div>
       </div>
     </section>
 
     <section class="bg-primary-700">
-      <div class="container">
-        <h1>Boost your links today</h1>
+      <div class="container boost">
+        <h1 class="clr-neutral-100">Boost your links today</h1>
         <button class="button button--blue button--rd-mid">Get Started</button>
       </div>
     </section>

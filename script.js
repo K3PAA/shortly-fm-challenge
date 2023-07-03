@@ -28,3 +28,80 @@ navList.forEach((link) => {
     toggleBtn.setAttribute('aria-expanded', false)
   })
 })
+
+const shortenInput = document.querySelector('.shorten--input')
+const shortenBtn = document.querySelector('.shorten--btn')
+const shortenListHolder = document.querySelector('.shorten-links')
+const addictionalInfo = document.querySelector('.addictional-info')
+
+function createElem(type, cl, text) {
+  const el = document.createElement(type)
+
+  const classes = cl.split(' ')
+  classes.forEach((cl) => {
+    el.classList.add(cl)
+  })
+
+  el.innerHTML = text
+
+  return el
+}
+
+function copyLink(liBtn, short) {
+  liBtn.innerHTML = `Copied !`
+  liBtn.classList.add('copied')
+  navigator.clipboard.writeText(short)
+
+  setTimeout(() => {
+    liBtn.classList.remove('copied')
+    liBtn.innerHTML = 'Copy'
+  }, 3000)
+}
+function addShortenLink(e, long, short) {
+  e.preventDefault()
+
+  const li = document.createElement('li')
+  li.classList.add('shorten-item')
+
+  li.append(createElem('p', 'long-link', long))
+  li.append(createElem('p', 'short-link', short))
+  li.append(createElem('button', 'button copy-btn button--rd-sm', 'Copy !'))
+
+  const liBtn = li.querySelector('button')
+  liBtn.addEventListener('click', () => copyLink(liBtn, short))
+
+  shortenListHolder.append(li)
+}
+
+function showError() {
+  shortenInput.classList.add('danger')
+  addictionalInfo.innerHTML = 'Please add a link'
+
+  setTimeout(() => {
+    shortenInput.classList.remove('danger')
+    addictionalInfo.innerHTML = ''
+  }, 3000)
+}
+
+shortenBtn.addEventListener('click', async (e) => {
+  const inputValue = shortenInput.value
+
+  try {
+    const resp = await fetch(
+      `https://api.shrtco.de/v2/shorten?url=${inputValue}`
+    )
+
+    if (!resp.ok) {
+      throw new Error('Please add a link')
+    }
+    const data = await resp.json()
+
+    addShortenLink(e, inputValue, data.result.short_link)
+    console.log(shortenListHolder)
+    shortenInput.value = ''
+  } catch (err) {
+    console.log(err)
+
+    showError()
+  }
+})
