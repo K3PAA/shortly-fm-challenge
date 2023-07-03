@@ -83,7 +83,12 @@ function showError() {
   }, 3000)
 }
 
-shortenBtn.addEventListener('click', async (e) => {
+const mainForm = document.querySelector('.main-form')
+
+mainForm.addEventListener('submit', submitForm)
+
+async function submitForm(e) {
+  e.preventDefault()
   const inputValue = shortenInput.value
 
   try {
@@ -104,4 +109,4 @@ shortenBtn.addEventListener('click', async (e) => {
 
     showError()
   }
-})
+}

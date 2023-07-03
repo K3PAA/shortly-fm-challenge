@@ -288,7 +288,6 @@ main {
 @media (max-width: 44em) {
   .primary-header {
     height: 100px;
-    border: 1px solid green;
   }
 
   .primary-header img {
@@ -412,6 +411,21 @@ main {
   position: relative;
 }
 
+.form-section form::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('./images/bg-shorten-desktop.svg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.form-section button {
+  z-index: 1;
+}
+
 .shorten-links {
   display: flex;
   flex-direction: column;
@@ -485,8 +499,16 @@ main {
   }
 
   .form-section form {
+    overflow: hidden;
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .form-section form::before {
+    background: url('./images/bg-shorten-mobile.svg');
+    background-size: contain;
+    left: 50%;
+    background-repeat: no-repeat;
   }
 
   .addictional-info {
@@ -556,8 +578,6 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-
-  outline: 1px solid green;
 }
 
 .card {
@@ -648,12 +668,19 @@ main {
 /* Boost section */
 
 .boost {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-block-start: 3rem;
   padding-block-end: 6rem;
+}
+
+.boost-svg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('./images/bg-boost-desktop.svg');
 }
 
 .boost h1 {
@@ -670,5 +697,71 @@ main {
 @media (max-width: 40em) {
   .boost h1 {
     font-size: var(--fs-450);
+  }
+
+  .boost-svg {
+    background-image: url('./images/bg-boost-mobile.svg');
+  }
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  padding-block: 2em;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--ff-primary);
+}
+
+.footer .logo {
+  filter: invert(1);
+}
+
+.secondary-nav {
+  display: flex;
+  gap: 4rem;
+}
+
+.secondary-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+.secondary-nav ul h3 {
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-250);
+  font-weight: bold;
+  margin-block: 1.75em;
+}
+
+.secondary-nav ul li a {
+  color: var(--clr-neutral-200);
+  font-size: var(--fs-200);
+  text-decoration: none;
+}
+
+.scoial-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 55em) {
+  .footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 30em) {
+  .secondary-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .secondary-nav ul h3 {
+    margin-block: 0.5em;
   }
 }
